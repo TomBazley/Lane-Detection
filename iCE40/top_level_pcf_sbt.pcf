@@ -1,0 +1,83 @@
+# ##############################################################################
+
+# iCEcube PCF
+
+# Version:            2020.12.27943
+
+# File Generated:     Apr 4 2022 16:43:52
+
+# Family & Device:    iCE40HX1K
+
+# Package:            TQ144
+
+# ##############################################################################
+
+###IOSet List 2
+set_io clk 37
+
+set_io mosi 68
+set_io sck 70
+set_io cs_n 71
+
+set_io b_in[0] 1
+set_io b_in[1] 2
+set_io b_in[2] 3
+set_io b_in[3] 4
+set_io b_in[4] 7
+set_io b_in[5] 8
+set_io b_in[6] 9
+set_io b_in[7] 10
+set_io g_in[0] 11
+set_io g_in[1] 12
+set_io g_in[2] 19
+set_io g_in[3] 20
+set_io g_in[4] 21
+set_io g_in[5] 22
+set_io g_in[6] 23
+set_io g_in[7] 24
+set_io r_in[0] 25
+set_io r_in[1] 26
+set_io r_in[2] 28
+set_io r_in[3] 29
+set_io r_in[4] 31
+set_io r_in[5] 32
+set_io r_in[6] 33
+set_io r_in[7] 34
+set_io sogout 38
+set_io hsync 39
+set_io vsync 41
+set_io oe_field 42
+set_io clamp 144
+
+set_io r_out[0] 73
+set_io r_out[1] 74
+set_io r_out[2] 75
+set_io r_out[3] 76
+set_io r_out[4] 78
+set_io r_out[5] 79
+set_io r_out[6] 80
+set_io r_out[7] 81
+set_io g_out[0] 87
+set_io g_out[1] 88
+set_io g_out[2] 90
+set_io g_out[3] 91
+set_io g_out[4] 93
+set_io g_out[5] 94
+set_io g_out[6] 95
+set_io g_out[7] 96
+set_io b_out[0] 97
+set_io b_out[1] 98
+set_io b_out[2] 99
+set_io b_out[3] 101
+set_io b_out[4] 102
+set_io b_out[5] 104
+set_io b_out[6] 105
+set_io b_out[7] 106
+set_io disp_clk 107
+set_io disp_disp 112
+set_io disp_hsync 113
+set_io disp_vsync 114
+set_io disp_den 115
+set_io disp_bist 116
+
+set_io led 121
