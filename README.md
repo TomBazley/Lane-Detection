@@ -1,0 +1,3 @@
+# Lane Detection
+
+A final year university project that aims to detect lanes on a road from a live video feed using an FPGA. The lanes are detected by applying the sobel operator combined with searching for bright pixels. A circuit board was designed which includes, in addition to an iCE40 FPGA, a VGA port for video input, a VGA-to-digital conversion chip, a STM32 microcontroller, and a display to view the processed images. The circuit board also features a power supply, overvoltage protection, and reverse polarity protection.
