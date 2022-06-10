@@ -67,11 +67,11 @@ VHDL2008=True
 VerilogIncludeSearchPath=
 
 [tool options]
-PlacerEffortLevel=std
+PlacerEffortLevel=mid
 PlacerAutoLutCascade=no
 PlacerAutoRamCascade=no
 PlacerPowerDriven=no
-PlacerAreaDriven=no
+PlacerAreaDriven=yes
 RouteWithTimingDriven=yes
 RouteWithPinPermutation=yes
 BitmapSPIFlashMode=yes

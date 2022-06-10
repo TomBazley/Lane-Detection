@@ -39,10 +39,8 @@ architecture a1 of edge_detection is
 begin
 
   process (clk)
-    variable G_xp : signed(11 downto 0);
-    variable G_xn : signed(11 downto 0);
-    variable G_yp : signed(9 downto 0);
-    variable G_yn : signed(9 downto 0);
+    variable G_xp : signed(10 downto 0);
+    variable G_xn : signed(10 downto 0);
   
     variable top_row : vector_array(0 to 4)(7 downto 0);
     variable mid_row : vector_array(0 to 4)(7 downto 0);
@@ -54,29 +52,29 @@ begin
       mid_row := mid & mid_row(0 to 3);
       bot_row := bot & bot_row(0 to 3);
       
-      G_xp := signed(("0000" & unsigned(top_row(1))) +
-                     ("0000" & unsigned(mid_row(1))) +
-                     ("0000" & unsigned(mid_row(1))) +
-                     ("0000" & unsigned(bot_row(1))) + 
-                     ("0000" & unsigned(top_row(0))) +
-                     ("0000" & unsigned(mid_row(0))) +
-                     ("0000" & unsigned(mid_row(0))) +
-                     ("0000" & unsigned(bot_row(0))));
+      G_xp := signed(("000" & unsigned(top_row(1))) +
+                     ("000" & unsigned(mid_row(1))) +
+                     ("000" & unsigned(mid_row(1))) +
+                     ("000" & unsigned(bot_row(1))) + 
+                     ("000" & unsigned(top_row(0))) +
+                     ("000" & unsigned(mid_row(0))) +
+                     ("000" & unsigned(mid_row(0))) +
+                     ("000" & unsigned(bot_row(0))));
       
-      G_xn := signed(("0000" & unsigned(top_row(4))) +
-                     ("0000" & unsigned(mid_row(4))) +
-                     ("0000" & unsigned(mid_row(4))) +
-                     ("0000" & unsigned(bot_row(4))) + 
-                     ("0000" & unsigned(top_row(3))) +
-                     ("0000" & unsigned(mid_row(3))) +
-                     ("0000" & unsigned(mid_row(3))) +
-                     ("0000" & unsigned(bot_row(3))));
+      G_xn := signed(("000" & unsigned(top_row(4))) +
+                     ("000" & unsigned(mid_row(4))) +
+                     ("000" & unsigned(mid_row(4))) +
+                     ("000" & unsigned(bot_row(4))) + 
+                     ("000" & unsigned(top_row(3))) +
+                     ("000" & unsigned(mid_row(3))) +
+                     ("000" & unsigned(mid_row(3))) +
+                     ("000" & unsigned(bot_row(3))));
 
       if (x < 10 or x > XRES) then
         edge <= (others => '0');
         edge_threshold <= (others => '0');
       else
-        edge <= std_logic_vector(unsigned(abs(G_xp - G_xn)))(11 downto 4);
+        edge <= std_logic_vector(unsigned(abs(G_xp - G_xn)))(10 downto 3);
         if (unsigned(abs(G_xp - G_xn)) > x"64") then
           edge_threshold <= (others => '1');
         else
